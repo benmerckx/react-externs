@@ -1,0 +1,11 @@
+{
+  "name": "react-externs",
+  "url": "https://github.com/benmerckx/react-externs",
+  "description": "Extern definitions react",
+  "license": "MIT",
+  "version": "0.0.0",
+  "releasenote": "",
+  "classPath": "src",
+  "contributors": ["benmerckx"],
+  "tags": ["js", "react", "web", "extern"]
+}
