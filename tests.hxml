@@ -1,0 +1,6 @@
+-lib hxnodejs
+-lib react-externs
+-lib genes
+-main tests.Run
+-js bin/tests.mjs
+-dce full

@@ -6,7 +6,7 @@ import haxe.Constraints.Function;
 import js.lib.Promise;
 import js.lib.Error;
 
-typedef OneOf<A, B> = EitherType<A, B>;
+private typedef OneOf<A, B> = EitherType<A, B>;
 typedef Key = OneOf<String, Int>;
 typedef ReactElement<P> = {
   type:Dynamic,
@@ -19,7 +19,7 @@ typedef Ref<T> = OneOf<MutableRefObject<T>, OneOf<RefObject<T>, T->Void>>;
 typedef RefObject<T> = {final current: T;}
 typedef MutableRefObject<T> = {current: T}
 typedef ComponentClass<P> = Class<Component<P>>;
-typedef FunctionComponent<P> = P -> ReactNode;
+typedef FunctionComponent<P> = OneOf<P -> ReactNode, () -> ReactNode>;
 typedef ComponentType<P> = OneOf<FunctionComponent<P>, ComponentClass<P>>;
 typedef CreateElement<P> = OneOf<String, ComponentType<P>>;
 typedef Context<T> = {
@@ -39,7 +39,7 @@ typedef DependencyList = Array<Dynamic>;
 typedef Reducer<S, A> = (prevState: S, action: A) -> S;
 typedef ImportedModule<T> = Dynamic; //{default: T}
 
-@:jsRequire('react')
+@:jsRequire('react', 'default')
 extern class React {
   static final version:String;
 

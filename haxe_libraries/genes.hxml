@@ -1,0 +1,6 @@
+# @install: lix --silent download "gh://github.com/benmerckx/genes#67fc4e743afadc2c8557d16570fee5e4e580cc04" into genes/0.2.1/github/67fc4e743afadc2c8557d16570fee5e4e580cc04
+-lib set
+-cp ${HAXE_LIBCACHE}/genes/0.2.1/github/67fc4e743afadc2c8557d16570fee5e4e580cc04/src
+-D genes=0.2.1
+genes.Register
+--macro genes.Generator.use()
